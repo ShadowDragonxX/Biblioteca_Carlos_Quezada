@@ -2,6 +2,7 @@ package com.example.biblioteca_digital;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -70,5 +71,10 @@ public class libros_act extends AppCompatActivity {
             txt.setText("Stock disponible: "+cantidad2+"\n"+
                     "El precio final es: "+ resultado);
         }
+    }
+    public void mqtt(View view)
+    {
+        Intent i = new Intent(this,Mqtt_act.class);
+        startActivity(i);
     }
 }
